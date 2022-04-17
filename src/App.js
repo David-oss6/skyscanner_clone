@@ -2,8 +2,11 @@ import "./styles/header.css";
 import "./styles/main.css";
 import "./styles/article.css";
 import logo from "./img/logo.png";
+import room from "./img/room.jpg";
 import mapaCovid from "./img/mapaCovid.png";
-import { useState, useRef } from "react";
+import { useState } from "react";
+import axios from "axios";
+import { hoteles } from "./aplication/hoteles";
 
 function App() {
   const [goRetBtn, setGoRetBtn] = useState({
@@ -145,8 +148,8 @@ function App() {
           </div>
         </div>
       </main>
-
       <div className="sugerencias">Sugerencias</div>
+      {/* EMPIEZA MAPA COVID ************************************************/}
       <article>
         <div className="mapaCovid_container">
           <div className="texto_div">
@@ -155,9 +158,53 @@ function App() {
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               architecto quos optio quisquam voluptatum et?
             </p>
-            <button className="mapaCovid_btn">Explora el mapa</button>
+            <a
+              href="https://www.skyscanner.es/travel-restrictions?vaccinationStatus=fully-vaccinated"
+              target="_blank"
+              className="mapaCovid_btn"
+            >
+              Explora el mapa
+            </a>
           </div>
           <img className="mapa_img" src={mapaCovid} alt="mapa" />
+        </div>
+        {/* EMPIEZA HOTELES *************************************************/}
+        <div className="planifica_escapada_div">
+          <h2>Planifica tu próxima escapada</h2>
+          <div className="botones">
+            <div className="destinos">
+              <button>Madrid</button>
+              <button>Palma de Mallorca</button>
+              <button>Ibiza</button>
+              <button>Santa Cruz de Tenerife</button>
+              <button>Barcelona</button>
+            </div>
+            <div className="flechas">
+              <p>Ver mas hoteles</p>
+              <butt> {"<"} </butt>
+              <butt> {">"} </butt>
+            </div>
+          </div>
+          <div className="hoteles_cards">
+            {hoteles &&
+              hoteles.map((hotel, index) => {
+                if (index < 3) {
+                  return (
+                    <div key={index} className="card_container">
+                      <img className="card_img" src={room} alt="room" />
+                      <div className="hotel_info">
+                        <p>📍{hotel.location}</p>
+                        <h4 className="card_title">{hotel.name}</h4>
+                        <div className="starPrice_row">
+                          <p>⭐{hotel.stars}</p>
+                          <p>{hotel.price}/night</p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
+              })}
+          </div>
         </div>
       </article>
     </div>

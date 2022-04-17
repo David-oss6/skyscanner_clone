@@ -30,18 +30,59 @@
   border: none;
   color: white;
   font-size: 0.9rem;
-  max-width: 150px;
-  padding: 2% 4%;
+  max-width: fit-content;
+  padding: 2% 4% 2% 4%;
   font-weight: bolder;
   border-radius: 8px;
   cursor: pointer;
+  text-decoration: none;
 }
-
 .mapaCovid_btn:hover {
   background-image: linear-gradient(-180deg, #026e65, #026e65);
 }
-
 .mapa_img {
   width: 30vw;
   border-radius: 10px;
+}
+/* SEGUNDO ARTICULO ***********************/
+.planifica_escapada_div {
+  padding: 0 2%;
+}
+.botones {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+
+.flechas {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.hoteles_cards {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card_container {
+  border: 2px solid lightgrey;
+  border-radius: 10px 10px 0 0px;
+}
+.card_img {
+  border-radius: 10px 10px 0 0px;
+  width: 320px;
+}
+.hotel_info {
+  padding: 0 10px;
+}
+.starPrice_row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
