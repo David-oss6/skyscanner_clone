@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import "./article.css";
 import room from "../../img/room.jpg";
 import mapaCovid from "../../img/mapaCovid.png";
 import { hoteles } from "../../aplication/hoteles";
 
 export default function Article() {
+  const [size, setSize] = useState();
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize(window.innerWidth);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    console.log(size);
+    return;
+  }, []);
+  useEffect(() => {
+    setSize(window.innerWidth);
+    console.log(size);
+  }, [window.innerWidth]);
+
   return (
     <article>
       <div className="mapaCovid_container">
@@ -29,11 +44,11 @@ export default function Article() {
         <h2>Planifica tu próxima escapada</h2>
         <div className="botones">
           <div className="destinos">
-            <button className="selected">Madrid</button>
-            <button className="destino_btn">Palma de Mallorca</button>
-            <button className="destino_btn">Ibiza</button>
-            <button className="destino_btn">Santa Cruz de Tenerife</button>
-            <button className="destino_btn">Barcelona</button>
+            <button className="selected  ">Madrid</button>
+            <button className="destino_btn ">Palma de Mallorca</button>
+            <button className="destino_btn hide">Ibiza</button>
+            <button className="destino_btn hide">Santa Cruz de Tenerife</button>
+            <button className="destino_btn hide">Barcelona</button>
           </div>
           <div className="flechas">
             <a className="vermashoteles" href="#" target="_blank">

@@ -67,7 +67,7 @@ export default function Main() {
         {/* EMPIEZA INPUTS ORGIEN DESTINO FECHAS ****************/}
 
         <div className="ruta_fecha_div">
-          <div className="de__a_claseCabina_div">
+          <div className="de__a_claseCabina_div de_a_uno">
             <label className="input_label_container" htmlFor="">
               De
               <input className="ruta_inputs primer_input" type="text" />
@@ -83,7 +83,7 @@ export default function Main() {
               </label>
             </div>
           </div>
-          <div className="de__a_claseCabina_div">
+          <div className="de__a_claseCabina_div de_a_dos">
             <label className="input_label_container" htmlFor="">
               A
               <input className="ruta_inputs " type="text" />
@@ -95,13 +95,13 @@ export default function Main() {
               </label>
             </div>
           </div>
-          <div className="salida_regreso_div">
+          <div className="salida_regreso_div salida_media">
             <label className="input_label_container" htmlFor="">
               Salida
               <input className=" regreso_input" type="date" />
             </label>
           </div>
-          <div className="salida_regreso_div">
+          <div className="salida_regreso_div trgreso_media">
             <label className="input_label_container" htmlFor="">
               Regreso
               <input
