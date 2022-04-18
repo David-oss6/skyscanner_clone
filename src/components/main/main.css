@@ -34,13 +34,13 @@ main h2 {
   color: white;
   border-radius: 4px;
   padding: 1%;
-  min-height: 35vh;
-  max-width: 90vw;
+  min-height: 30vh;
+  width: 60rem;
   background-color: var(--blue_hover);
   background-image: linear-gradient(
     to bottom right,
     var(--blue_hover),
-    #05488f
+    #052b53
   );
   border-radius: 10px;
 }
@@ -49,8 +49,8 @@ main h2 {
 .idavuelta_div {
   display: flex;
   flex-wrap: nowrap;
-
-  align-items: center;
+  margin-left: 4rem;
+  align-self: start;
 }
 .goRet_box {
   width: 15px;
@@ -182,7 +182,7 @@ main h2 {
     padding: 1%;
     min-height: none;
     max-width: none;
-    width: 450px;
+    width: 500px;
     background-color: var(--blue_hover);
     background-image: linear-gradient(
       to bottom right,

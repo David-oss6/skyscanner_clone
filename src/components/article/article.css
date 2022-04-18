@@ -9,7 +9,7 @@
   flex-wrap: nowrap;
   justify-content: space-around;
   margin: 60px auto;
-  max-width: 70vw;
+  max-width: 55rem;
   background-color: hsl(238, 52%, 14%, 15%);
   border-radius: 10px;
   padding: 5%;
@@ -98,6 +98,11 @@
   border: 2px solid rgb(175, 175, 175);
 }
 .flechas_btn:hover {
+  /* background-color: var(--blue); */
+  color: var(--blue);
+  /* border: 2px solid white; */
+}
+.flechas_btn:active {
   background-color: var(--blue);
   color: white;
   border: 2px solid white;
@@ -106,6 +111,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  overflow: hidden;
   gap: 10px;
 }
 
