@@ -1,0 +1,30 @@
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: var(--blue_hover);
+  margin-top: 60px;
+  gap: 40px;
+  padding-top: 5%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 5%;
+}
+.columna {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 230px;
+}
+
+.columna h5 {
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0;
+  color: #ff7b59;
+  font-weight: bold;
+}
+.columna a {
+  color: white;
+  text-decoration: none;
+  margin-top: 8px;
+  white-space: nowrap;
+}

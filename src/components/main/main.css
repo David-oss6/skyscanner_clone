@@ -13,7 +13,7 @@ body {
   padding-right: 5%;
   padding-top: 1%;
   padding-bottom: 6%;
-  background-image: url("../img/sunset.jpg");
+  background-image: url("../../img/sunset.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,11 +27,11 @@ main h2 {
 }
 .buscador_container {
   margin: auto;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: white;
   border-radius: 4px;
   padding: 1%;
-  min-height: 40vh;
+  min-height: 35vh;
   max-width: 80vw;
   background-color: var(--blue_hover);
   background-image: linear-gradient(
@@ -41,11 +41,13 @@ main h2 {
   );
   border-radius: 10px;
 }
+
+/* IDA VUELTA DIV INICIO  **************************************************/
 .idavuelta_div {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  margin-left: 11%;
+  margin-left: 16%;
 }
 .goRet_box {
   width: 15px;
@@ -69,7 +71,7 @@ main h2 {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  gap: 2px;
+  gap: 10px;
 }
 
 .input_label_container {
@@ -80,54 +82,58 @@ main h2 {
 }
 
 .ruta_inputs {
-  padding: 3%;
-
+  padding: 0.32rem;
   height: 38px;
   outline: none;
   border: none;
+  width: 99%;
 }
 .primer_input {
   border-radius: 4px 0px 0px 4px;
-}
-
-.filtros_de {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
 .ultimo_input {
   border-radius: 0px 4px 4px 0px;
 }
 
+.filtros_de {
+  font-size: 0.8rem;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.filtros_de label {
+  white-space: nowrap;
+}
+
 .de__a_claseCabina_div {
-  width: 15vw;
   display: flex;
   flex-flow: column nowrap;
 }
 
 .salida_regreso_div {
   display: flex;
-  width: 8vw;
   flex-flow: column nowrap;
 }
 
 .regreso_input {
-  padding: 3%;
+  padding: 0.2rem;
   height: 42px;
+  width: 100%;
   outline: none;
   border: none;
 }
 
 .buscar_btn {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   align-self: end;
   cursor: pointer;
-  margin-top: 8%;
-  padding: 2% 6%;
+  margin-top: 15px;
+  padding: 2%;
   border-radius: 4px;
-  width: 55%;
-  height: 65%;
+  width: 130px;
+  height: 50px;
   border: none;
   color: white;
   background-image: linear-gradient(-180deg, #00a698, #00a698);
@@ -153,12 +159,4 @@ main h2 {
   height: 40px;
   transform: rotate(-90deg);
   cursor: pointer;
-}
-
-.sunset {
-  background-image: url("../img/sunset_pico.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 40px;
 }
