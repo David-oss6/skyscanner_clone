@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/skyscanner_clone/static/css/main.52adb8b5.css",
-    "main.js": "/skyscanner_clone/static/js/main.3c744a30.js",
+    "main.js": "/skyscanner_clone/static/js/main.fcbcf378.js",
     "static/media/sunset.jpg": "/skyscanner_clone/static/media/sunset.de390592983bf9dc486b.jpg",
     "static/media/mapaCovid.png": "/skyscanner_clone/static/media/mapaCovid.ec9b163ff51e8d087ba7.png",
     "index.html": "/skyscanner_clone/index.html",
     "main.52adb8b5.css.map": "/skyscanner_clone/static/css/main.52adb8b5.css.map",
-    "main.3c744a30.js.map": "/skyscanner_clone/static/js/main.3c744a30.js.map"
+    "main.fcbcf378.js.map": "/skyscanner_clone/static/js/main.fcbcf378.js.map"
   },
   "entrypoints": [
     "static/css/main.52adb8b5.css",
-    "static/js/main.3c744a30.js"
+    "static/js/main.fcbcf378.js"
   ]
 }
