@@ -3,7 +3,7 @@ import logo from "../../img/logo.png";
 import "./header.css";
 
 export default function Header() {
-  const [size, setSize] = useState(0);
+  const [size, setSize] = useState(1000);
   const [hamb, setHamb] = useState(false);
   window.addEventListener("resize", () => {
     setSize(window.innerWidth);
