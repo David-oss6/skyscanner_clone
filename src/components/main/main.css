@@ -8,7 +8,6 @@ body {
   padding: 0;
 }
 .main {
-  margin: 0;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 1%;
@@ -46,12 +45,12 @@ main h2 {
 }
 
 /* IDA VUELTA DIV INICIO  **************************************************/
-.idavuelta_div {
+/* .idavuelta_div {
   display: flex;
   flex-wrap: nowrap;
   margin-left: 4rem;
   align-self: start;
-}
+} */
 .goRet_box {
   width: 15px;
   height: 15px;
@@ -83,21 +82,52 @@ main h2 {
   gap: 2px;
   white-space: nowrap;
 }
-
-.ruta_inputs {
+.salida_regreso_cabina_label_container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2px;
+  white-space: nowrap;
+  max-width: 10rem;
+}
+/* INPUTS  ********************************************/
+.de_input {
+  padding: 0.32rem;
+  height: 38px;
+  outline: none;
+  border: none;
+  width: 99%;
+  border-radius: 4px 0px 0px 4px;
+}
+.a_input {
   padding: 0.32rem;
   height: 38px;
   outline: none;
   border: none;
   width: 99%;
 }
-.primer_input {
-  border-radius: 4px 0px 0px 4px;
+.salida_input {
+  padding: 0.2rem;
+  height: 42px;
+  width: 99%;
+  outline: none;
+  border: none;
 }
-.ultimo_input {
+.regreso_input {
+  padding: 0.2rem;
+  height: 42px;
+  width: 99%;
+  outline: none;
+  border: none;
+}
+.clase_cabina_input {
+  padding: 0.32rem;
+  height: 38px;
+  outline: none;
+  border: none;
+  width: 99%;
   border-radius: 0px 4px 4px 0px;
 }
-
+/* INPUTS FIN  ********************************************/
 .filtros_de {
   font-size: 0.8rem;
   margin-top: 15px;
@@ -117,14 +147,6 @@ main h2 {
 .salida_regreso_div {
   display: flex;
   flex-flow: column nowrap;
-}
-
-.regreso_input {
-  padding: 0.2rem;
-  height: 42px;
-  width: 100%;
-  outline: none;
-  border: none;
 }
 
 .buscar_btn {
@@ -163,8 +185,17 @@ main h2 {
   transform: rotate(-90deg);
   cursor: pointer;
 }
+@media (min-width: 920px) {
+  .idavuelta_div {
+    align-self: start;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 0.9rem;
+    margin-left: 5rem;
+  }
+}
 
-@media (max-width: 980px) {
+@media (max-width: 1100px) {
   main h2 {
     margin: 2% auto;
     font-size: 2rem;
@@ -182,7 +213,7 @@ main h2 {
     padding: 1%;
     min-height: none;
     max-width: none;
-    width: 500px;
+    width: 100%;
     background-color: var(--blue_hover);
     background-image: linear-gradient(
       to bottom right,
@@ -193,8 +224,8 @@ main h2 {
   }
   .idavuelta_div {
     display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+    flex-flow: row nowrap;
+    font-size: 1rem;
   }
 
   .ruta_fecha_div {
@@ -210,23 +241,56 @@ main h2 {
     gap: 2px;
     white-space: nowrap;
   }
+  .salida_regreso_cabina_label_container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2px;
+    white-space: nowrap;
+    max-width: 10rem;
+  }
 
-  .ruta_inputs {
+  /* INPUTS  ********************************************/
+  .de_input {
+    padding: 0.32rem;
+    height: 38px;
+    outline: none;
+    border: none;
+    width: 99%;
+    border-radius: none;
+  }
+  .a_input {
     padding: 0.32rem;
     height: 38px;
     outline: none;
     border: none;
     width: 99%;
   }
-  .primer_input {
-    border-radius: 4px 0px 0px 4px;
+  .salida_input {
+    padding: 0.2rem;
+    height: 42px;
+    width: 90%;
+    outline: none;
+    border: none;
   }
-  .ultimo_input {
-    border-radius: 0px 4px 4px 0px;
+  .regreso_input {
+    padding: 0.2rem;
+    height: 42px;
+    width: 90%;
+    outline: none;
+    border: none;
   }
+  .clase_cabina_input {
+    padding: 0.32rem;
+    height: 38px;
+    outline: none;
+    border: none;
+    width: 90%;
+    border-radius: none;
+  }
+  /* INPUTS FIN  ********************************************/
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   .main {
     margin: 0;
     padding-left: 0;
@@ -245,24 +309,112 @@ main h2 {
     color: white;
     text-shadow: 1px 1px 4px black;
   }
+  .idavuelta_div {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 0.9rem;
+  }
   .buscador_container {
     display: flex;
     flex-direction: column;
-    align-items: none;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
     font-size: 1rem;
     color: white;
     border-radius: 4px;
     padding: 1%;
     min-height: none;
     max-width: none;
-    min-width: 400px;
+    min-width: none;
     background-color: var(--blue_hover);
     background-image: linear-gradient(
       to bottom right,
       var(--blue_hover),
       #05488f
     );
-    border-radius: 10px;
+  }
+  .filtros_de {
+    font-size: 0.6rem;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .filtros_de label {
+    white-space: nowrap;
+  }
+
+  /* INPUTS  ********************************************/
+  .text {
+    font-size: 0.7rem;
+  }
+  .input_label_container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2px;
+    white-space: nowrap;
+    max-width: 10rem;
+  }
+  .salida_regreso_cabina_label_container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2px;
+    white-space: nowrap;
+    max-width: 6.5rem;
+  }
+  .de_input {
+    padding: 0.32rem;
+    height: 38px;
+    outline: none;
+    border: none;
+    width: none;
+    border-radius: 0 0px 0px 0px;
+    flex-shrink: 10;
+  }
+  .a_input {
+    padding: 0.32rem;
+    height: 38px;
+    outline: none;
+    border: none;
+    width: 99%;
+  }
+  .salida_input {
+    padding: 0.2rem;
+    height: 42px;
+    width: 92%;
+    outline: none;
+    border: none;
+  }
+  .regreso_input {
+    padding: 0.2rem;
+    height: 42px;
+    width: 92%;
+    outline: none;
+    border: none;
+  }
+  .clase_cabina_input {
+    padding: 0.32rem;
+    height: 38px;
+    outline: none;
+    border: none;
+    width: 99%;
+    border-radius: 0px;
+  }
+  /* INPUTS FIN  ********************************************/
+  .buscar_btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-self: end;
+    cursor: pointer;
+    margin-top: 12px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 1%;
+    border-radius: 4px;
+    width: 100px;
+    height: 2rem;
+    border: none;
+    color: white;
+    background-image: linear-gradient(-180deg, #00a698, #00a698);
   }
 }

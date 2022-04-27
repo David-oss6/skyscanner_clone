@@ -12,12 +12,11 @@ export default function Article() {
     }
     window.addEventListener("resize", updateSize);
     updateSize();
-    console.log(size);
+
     return;
   }, []);
   useEffect(() => {
     setSize(window.innerWidth);
-    console.log(size);
   }, [window.innerWidth]);
 
   return (

@@ -60,3 +60,34 @@ footer {
     white-space: nowrap;
   }
 }
+@media (max-width: 500px) {
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: var(--blue_hover);
+    margin-top: 30px;
+    gap: 20px;
+    padding: 2%;
+  }
+  .columna {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 150px;
+  }
+
+  .columna h5 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    color: #ff7b59;
+    font-weight: bold;
+  }
+  .columna a {
+    font-size: 0.7rem;
+    color: white;
+    text-decoration: none;
+    margin-top: 8px;
+    white-space: nowrap;
+  }
+}

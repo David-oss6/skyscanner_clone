@@ -1,7 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./main.css";
 
 export default function Main() {
+  const [formulario, setFormulario] = useState({
+    origen: "",
+    destino: "",
+    salida: "",
+    regreso: "",
+    pax: "",
+  });
+
+  // useEffect(() => {}, [formulario]);
+
   const [goRetBtn, setGoRetBtn] = useState({
     idaVuelta: true,
     soloIda: false,
@@ -67,10 +77,16 @@ export default function Main() {
         {/* EMPIEZA INPUTS ORGIEN DESTINO FECHAS ****************/}
 
         <div className="ruta_fecha_div">
-          <div className="de__a_claseCabina_div de_a_uno">
-            <label className="input_label_container" htmlFor="">
+          <div className="de__a_claseCabina_div ">
+            <label className="input_label_container text">
               De
-              <input className="ruta_inputs primer_input" type="text" />
+              <input
+                onChange={(e) =>
+                  setFormulario({ ...formulario, origen: e.target.value })
+                }
+                className="de_input"
+                type="text"
+              />
             </label>
             <div className="filtros_de">
               <label htmlFor="">
@@ -83,10 +99,16 @@ export default function Main() {
               </label>
             </div>
           </div>
-          <div className="de__a_claseCabina_div de_a_dos">
-            <label className="input_label_container" htmlFor="">
+          <div className="de__a_claseCabina_div ">
+            <label className="input_label_container text" htmlFor="">
               A
-              <input className="ruta_inputs " type="text" />
+              <input
+                onChange={(e) =>
+                  setFormulario({ ...formulario, destino: e.target.value })
+                }
+                className="a_input "
+                type="text"
+              />
             </label>
             <div className="filtros_de">
               <label htmlFor="">
@@ -95,31 +117,58 @@ export default function Main() {
               </label>
             </div>
           </div>
-          <div className="salida_regreso_div salida_media">
-            <label className="input_label_container" htmlFor="">
-              Salida
-              <input className=" regreso_input" type="date" />
-            </label>
-          </div>
-          <div className="salida_regreso_div trgreso_media">
-            <label className="input_label_container" htmlFor="">
-              Regreso
-              <input
-                className=" regreso_input"
-                type={goRetBtn.soloIda ? "text" : "date"}
-                value={goRetBtn.soloIda && "(Sólo Ida)"}
-              />
-            </label>
-          </div>
-          <div className="de__a_claseCabina_div">
-            <label className="input_label_container" htmlFor="">
-              Clase de cabina y viajero
-              <input className="ruta_inputs ultimo_input" type="text" />
-            </label>
-            <button className="buscar_btn">Buscar</button>
+          <div style={{ display: "flex", flexFlow: "row no wrap" }}>
+            <div className="salida_regreso_div salida_media">
+              <label
+                className="salida_regreso_cabina_label_container  text"
+                htmlFor=""
+              >
+                Salida
+                <input
+                  onChange={(e) =>
+                    setFormulario({ ...formulario, salida: e.target.value })
+                  }
+                  className=" salida_input"
+                  type="date"
+                />
+              </label>
+            </div>
+            <div className="salida_regreso_div trgreso_media">
+              <label
+                className="salida_regreso_cabina_label_container  text"
+                htmlFor=""
+              >
+                Regreso
+                <input
+                  onChange={(e) =>
+                    setFormulario({ ...formulario, regreso: e.target.value })
+                  }
+                  className=" regreso_input"
+                  type={goRetBtn.soloIda ? "text" : "date"}
+                  value={goRetBtn.soloIda && "(Sólo Ida)"}
+                />
+              </label>
+            </div>
+            <div className="de__a_claseCabina_div">
+              <label
+                className="salida_regreso_cabina_label_container  text"
+                htmlFor=""
+              >
+                Clase de cabina y viajero
+                <input
+                  onChange={(e) =>
+                    setFormulario({ ...formulario, pax: e.target.value })
+                  }
+                  className="clase_cabina_input"
+                  type="text"
+                />
+              </label>
+              <button className="buscar_btn">Buscar</button>
+            </div>
           </div>
         </div>
       </div>
+
       <div className="sugerencias">Sugerencias</div>
     </main>
   );
