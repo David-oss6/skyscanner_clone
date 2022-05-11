@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../img/logo.png";
+import hamburguer from "../../img/hamburger.png";
 import "./header.css";
 
 export default function Header() {
@@ -26,7 +27,9 @@ export default function Header() {
             </div>
           ) : (
             <>
-              <button onClick={() => setHamb(!hamb)}>Hamburguer</button>
+              <button className="hamburguer_btn" onClick={() => setHamb(!hamb)}>
+                <img className="hamburguer" src={hamburguer} alt="menu" />
+              </button>
               {hamb && (
                 <div
                   style={{

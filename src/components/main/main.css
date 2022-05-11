@@ -18,8 +18,14 @@ body {
   background-size: cover;
   height: 450px;
 }
+.primer_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: auto;
+  width: 60rem;
+}
 main h2 {
-  margin-left: 4%;
   font-size: 3rem;
   color: white;
   text-shadow: 1px 1px 4px black;
@@ -28,7 +34,7 @@ main h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
+  /* margin: auto; */
   font-size: 1rem;
   color: white;
   border-radius: 4px;
@@ -197,10 +203,16 @@ main h2 {
 
 @media (max-width: 1100px) {
   main h2 {
-    margin: 2% auto;
     font-size: 2rem;
     color: white;
     text-shadow: 1px 1px 4px black;
+  }
+  .primer_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: auto;
+    width: auto;
   }
   .buscador_container {
     display: flex;
@@ -268,14 +280,14 @@ main h2 {
   .salida_input {
     padding: 0.2rem;
     height: 42px;
-    width: 90%;
+    width: 94%;
     outline: none;
     border: none;
   }
   .regreso_input {
     padding: 0.2rem;
     height: 42px;
-    width: 90%;
+    width: 94%;
     outline: none;
     border: none;
   }
@@ -303,8 +315,13 @@ main h2 {
     background-size: cover;
     height: 450px;
   }
+  .primer_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
   main h2 {
-    margin: 2% 9%;
     font-size: 2rem;
     color: white;
     text-shadow: 1px 1px 4px black;
@@ -361,6 +378,140 @@ main h2 {
     gap: 2px;
     white-space: nowrap;
     max-width: 6.5rem;
+  }
+  .de_input {
+    padding: 0.32rem;
+    height: 38px;
+    outline: none;
+    border: none;
+    width: none;
+    border-radius: 0 0px 0px 0px;
+    flex-shrink: 10;
+  }
+  .a_input {
+    padding: 0.32rem;
+    height: 38px;
+    outline: none;
+    border: none;
+    width: 99%;
+  }
+  .salida_input {
+    padding: 0.2rem;
+    height: 42px;
+    width: 92%;
+    outline: none;
+    border: none;
+  }
+  .regreso_input {
+    padding: 0.2rem;
+    height: 42px;
+    width: 92%;
+    outline: none;
+    border: none;
+  }
+  .clase_cabina_input {
+    padding: 0.32rem;
+    height: 38px;
+    outline: none;
+    border: none;
+    width: 99%;
+    border-radius: 0px;
+  }
+  /* INPUTS FIN  ********************************************/
+  .buscar_btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-self: end;
+    cursor: pointer;
+    margin-top: 12px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 1%;
+    border-radius: 4px;
+    width: 100px;
+    height: 2rem;
+    border: none;
+    color: white;
+    background-image: linear-gradient(-180deg, #00a698, #00a698);
+  }
+}
+
+@media (max-width: 450px) {
+  .main {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1%;
+    padding-bottom: 6%;
+    background-image: url("../../img/sunset.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+  }
+  .primer_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+  main h2 {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+  }
+  .idavuelta_div {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 0.7rem;
+  }
+  .buscador_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: white;
+    border-radius: 4px;
+    padding: 1%;
+    min-height: none;
+    max-width: none;
+    min-width: none;
+    background-color: var(--blue_hover);
+    background-image: linear-gradient(
+      to bottom right,
+      var(--blue_hover),
+      #05488f
+    );
+  }
+  .filtros_de {
+    font-size: 0.6rem;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .filtros_de label {
+    white-space: nowrap;
+  }
+
+  /* INPUTS  ********************************************/
+  .text {
+    font-size: 0.7rem;
+  }
+  .input_label_container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2px;
+    white-space: nowrap;
+    max-width: 10rem;
+  }
+  .salida_regreso_cabina_label_container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2px;
+    white-space: nowrap;
+    max-width: 5rem;
   }
   .de_input {
     padding: 0.32rem;
